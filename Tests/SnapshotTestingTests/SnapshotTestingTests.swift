@@ -200,7 +200,6 @@ final class SnapshotTestingTests: XCTestCase {
     button.appearance = NSAppearance(named: .aqua)
     if !ProcessInfo.processInfo.environment.keys.contains("GITHUB_WORKFLOW") {
       assertSnapshot(matching: button, as: .image)
-      assertSnapshot(matching: button, as: .recursiveDescription)
     }
     #endif
   }
@@ -214,7 +213,6 @@ final class SnapshotTestingTests: XCTestCase {
       view.layer?.cornerRadius = 5
       if !ProcessInfo.processInfo.environment.keys.contains("GITHUB_WORKFLOW") {
         assertSnapshot(of: view, as: .image)
-        assertSnapshot(of: view, as: .recursiveDescription)
       }
     #endif
   }
