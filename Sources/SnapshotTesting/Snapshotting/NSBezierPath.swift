@@ -103,10 +103,11 @@
     }
   }
 
-  private let defaultNumberFormatter: NumberFormatter = {
-    let numberFormatter = NumberFormatter()
-    numberFormatter.minimumFractionDigits = 1
-    numberFormatter.maximumFractionDigits = 3
-    return numberFormatter
-  }()
+private let defaultNumberFormatter: NumberFormatter = {
+  let numberFormatter = NumberFormatter()
+  numberFormatter.decimalSeparator = "."
+  numberFormatter.minimumFractionDigits = 1
+  numberFormatter.maximumFractionDigits = 3
+  return numberFormatter
+}()
 #endif
